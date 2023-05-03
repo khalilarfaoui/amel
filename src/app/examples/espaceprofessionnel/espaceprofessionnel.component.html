@@ -1,0 +1,119 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://media.istockphoto.com/id/1167803836/fr/photo/jeune-homme-heureux-de-sourire-joyeux-faisant-des-achats-en-ligne-ou-entrepreneur-satisfait.jpg?s=612x612&w=0&k=20&c=xb2FQulcgmgsedW5DhSvuULaQQerTxX9W2-L-DAhDB8=');">
+        </div>
+    </div>
+  
+  
+    <div class="section section-about-us">
+        <div class="container">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" style="border-right: 2px solid #ed6a18">
+                        <div>
+                            <h2><p style="color: #7c7c7c" >Inscription marchand </p></h2>
+                             </div>
+                         <div>
+                           <h5><p style="text-transform: none;">Vous êtes un commerçant?</p>
+                          <p style="text-transform: none;">Vous souhaitez integrer le paiement éléctronique à votre boutique en ligne? </p>
+                           <p style="text-transform:  none;">Venez vous inscrire par <a href="/examples/registerprofessionnel"  style="color: #ed6a18;"> 
+                            <b style="text-transform: uppercase;"> ICI </b> </a>  et bénéficier d'un espace professionnel complet. </p> 
+                            </h5>
+                         </div>
+                    </div>
+                   
+                    <div class="col-lg-6 col-md-12">
+                      <h2  style="color: #7c7c7c">Connexion</h2>
+                     
+     
+            <form action="" method="post" name="authentification" id="Form1">  
+           <div class="sidebar-widget">
+              <div class="form">
+             <div class="donate-us">
+              <input [(ngModel)]="_user" name="_user" id="_user" type="text" class="form-control input-field" placeholder="Numéro de compte (CLT)" autocomplete="off" required="required" value="" >           
+              <input name="_pass" [(ngModel)]="_pass" id="_pass" required="required" class="form-control input-field" autocomplete="off" placeholder="Mot de passe" type="password" value="" style="margin-top:20px;">                  
+                   </div>
+                
+                <div class="row" style="margin-top:20px;">
+                  <div class="col-md-6">
+                  <div class="cloud-tags">
+                  <a href="/" title="">Mot passe oublié</a>
+                   </div>
+                   </div>
+                  <div class="col-md-6">
+                    <input name="submitAuth" type="submit" class="btn btn-warning" id="submit" (click)="login()"  value="Se Connecter">                   
+                   </div>
+                      </div>       
+                     </div>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+                <div *ngIf="_errorMessage" class="alert alert-danger ml-3 text-white">{{_errorMessage}}</div>
+                <div *ngIf="_successMessage" class="alert alert-success ml-3 text-white">Login successful!</div>
+                
+            </div>
+        </div>
+    </div>
+  
+  
+  
+    <div class="section section-team text-center">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="team-player">
+                            <img src="https://www.gpgcheckout.com/images/s-hba-5.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+        
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+    </div>
+    <div class="section"  data-background-color="black">
+        <div class="row justify-content-md-center sharing-area text-center">
+          <div class="col-md-4 col-lg-8">
+            <h3 style="color: #ed6a18;">SUIVEZ-NOUS!</h3>
+          </div>
+          <div class="text-center col-md-4 col-lg-6">
+            <a target="_blank" href="https://twitter.com/GlobalPaymentGa" class="btn btn-neutral btn-icon btn-twitter btn-round btn-lg" rel="tooltip" alt="twitter-gpg-global-payement-gateway">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/GlobalPaymentGateway?ref=bookmarks" class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="facebook-gpg-global-payement-gateway-e-commerce-tunisie-checkout">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/company/5294983?trk=tyah&amp;trkInfo=tarId%3A1422286145350%2Ctas%3AGPG%2Cidx%3A3-1-9" class="btn btn-neutral btn-icon btn-linkedin btn-lg btn-round" rel="tooltip" title="linked-in-gpg-global-payement-gateway">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a target="_blank" href="https://plus.google.com/105307270472703676294/posts" class="btn btn-neutral btn-icon btn-google btn-round btn-lg" rel="tooltip" title="google-plus-gplus-gpg-global-payement-gateway">
+              <i class="fab fa-google"></i>              
+              </a>
+  
+           <a target="_blank" href="https://www.pinterest.com/gpgcheckout/" class="btn btn-neutral btn-icon btn-pinterest btn-round btn-lg" rel="tooltip" title="pinterest-gpg-global-payement-gateway">
+            <i class="fab fa-pinterest"></i>              
+           </a>
+  
+  
+          </div>
+        </div>
+    
+    </div>
+  
+  
+  
+  
+  <footer class="footer" style=" background-color: #ed6a18;">
+  <div class="row container text-center">
+  <div class="col-md-6">
+      <p style="color: white;font-size: 14px;">Copyright © 2023 - Powered by Global Payment Gateway 
+          <span style="color: white;font-size: 10px;">Tous droits réservés</span> 
+      </p>
+  </div>
+  <div class="col-md-6"> 
+  <img src="https://www.gpgcheckout.com/images/Carte%20paiement.png" alt="" title="">       
+  </div>
+  </div>
+  </footer>
+  

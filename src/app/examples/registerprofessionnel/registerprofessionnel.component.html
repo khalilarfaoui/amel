@@ -1,0 +1,621 @@
+<style>
+  .label {
+    font-size: x-large;
+  }
+</style>
+
+<div class="wrapper">
+  <div class="page-header page-header-small">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8"
+      style="background-image: url('https://media.istockphoto.com/id/1167803836/fr/photo/jeune-homme-heureux-de-sourire-joyeux-faisant-des-achats-en-ligne-ou-entrepreneur-satisfait.jpg?s=612x612&w=0&k=20&c=xb2FQulcgmgsedW5DhSvuULaQQerTxX9W2-L-DAhDB8=');">
+    </div>
+  </div>
+
+  <form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="section section-about-us">
+      <div class="container">
+
+        <div class="container">
+          <div class="row">
+
+
+            <div class="container" style="margin-top: 15px;">
+
+              <h2 style="color: #7c7c7c;"> Coordonnées client</h2>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form" style="margin-top:20px;">
+
+                    <div style="margin-top: 5px;" class="form-group">
+                      <label> Nom <span style="color: rgb(213, 13, 13);">*</span></label>
+                      <input ngModel name="nom" type="text" class="form-control input-field" #nom="ngModel"
+                        required="required">
+                      <div *ngIf="nom.invalid && nom.touched" class="text-danger">
+                        Nom est obligatoire.
+                      </div>
+                    </div>
+
+                    <div style="margin-top: 10px;" class="form-group">
+                      <label> Prénom <span style="color: rgb(213, 13, 13);">*</span></label>
+                      <input ngModel name="prenom" type="text" class="form-control input-field" #prenom="ngModel"
+                        required="required">
+                      <div *ngIf="prenom.invalid && prenom.touched" class="text-danger">
+                        Prenom est obligatoire.
+                      </div>
+                    </div>
+
+                    <div style="margin-top: 10px;" class="form-group">
+                      <label> Mail <span style="color: rgb(213, 13, 13);">*</span></label>
+                      <input ngModel name="email" type="email" class="form-control input-field" required
+                        #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                      <div *ngIf="email.invalid && email.touched" class="text-danger">
+                        Mail est obligatoire et doit être une adresse email valide.
+                      </div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                      <label> Mot de passe <span style="color: rgb(213, 13, 13);">*</span></label>
+                      <input ngModel name="password" type="password" class="form-control input-field"
+                        #password="ngModel" required>
+                      <div *ngIf="password.invalid && password.touched" class="text-danger">
+                        Mot de passe est obligatoire.
+                      </div>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                      <label> Téléphone <span style="color: rgb(213, 13, 13);">*</span></label>
+                      <input ngModel name="telephone" type="number" #telephone="ngModel"
+                        class="form-control input-field" required>
+                      <div *ngIf="telephone.invalid && telephone.touched" class="text-danger">
+                        Téléphone est obligatoire.
+                      </div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                      <label> pays </label>
+                      <select ngModel name="pays" #pays="ngModel" class="form-control input-field">
+                        <option value="andorre">andorre</option>
+                        <option value="emirats arabes unis">emirats arabes unis</option>
+                        <option value="afghanistan">afghanistan</option>
+                        <option value="antigua-et-barbuda">antigua-et-barbuda</option>
+                        <option value="anguilla">anguilla</option>
+                        <option value="albanie">albanie</option>
+                        <option value="arménie">arménie</option>
+                        <option value="antilles">antilles</option>
+                        <option value="angola">angola</option>
+                        <option value="antarctique">antarctique</option>
+                        <option value="argentine">argentine</option>
+                        <option value="samoa américaines">samoa américaines</option>
+                        <option value="autriche">autriche</option>
+                        <option value="australie">australie</option>
+                        <option value="aruba">aruba</option>
+                        <option value="azerbaïdjan">azerbaïdjan</option>
+                        <option value="bosnie-herzégovine">bosnie-herzégovine</option>
+                        <option value="barbade">barbade</option>
+                        <option value="bangladesh">bangladesh</option>
+                        <option value="belgique">belgique</option>
+                        <option value="bulgarie">bulgarie</option>
+                        <option value="bahreïn">bahreïn</option>
+                        <option value="burundi">burundi</option>
+                        <option value="bénin ">bénin </option>
+                        <option value="bermudes">bermudes</option>
+                        <option value="brunei darussalam">brunei darussalam</option>
+                        <option value="bolivie">bolivie</option>
+                        <option value="brésil">brésil</option>
+                        <option value="bahamas">bahamas</option>
+                        <option value="bhoutan">bhoutan</option>
+                        <option value="botswana">botswana</option>
+                        <option value="biélorussie">biélorussie</option>
+                        <option value="belize">belize</option>
+                        <option value="cambodge">cambodge</option>
+                        <option value="canada">canada</option>
+                        <option value="iles cocos">iles cocos</option>
+                        <option value="république démocratique du congo">république démocratique du congo</option>
+                        <option value="république centrafricaine">république centrafricaine</option>
+                        <option value="congo">congo</option>
+                        <option value="suisse">suisse</option>
+                        <option value="ci">côte d'ivoire</option>
+                        <option value="ck">iles cook</option>
+                        <option value="cl">chili</option>
+                        <option value="cm">cameroun</option>
+                        <option value="cn">chine</option>
+                        <option value="co">colombie</option>
+                        <option value="cr">costa rica</option>
+                        <option value="cu">cuba</option>
+                        <option value="cv">cap-vert</option>
+                        <option value="cx">ile christmas</option>
+                        <option value="cy">chypre</option>
+                        <option value="cz">république tchèque</option>
+                        <option value="de">allemagne</option>
+                        <option value="dj">djibouti</option>
+                        <option value="dk">danemark</option>
+                        <option value="dm">dominique</option>
+                        <option value="do">république dominicaine</option>
+                        <option value="dz">algérie</option>
+                        <option value="ec">equateur</option>
+                        <option value="ee">estonie</option>
+                        <option value="eg">egypte</option>
+                        <option value="eh">sahara occidental</option>
+                        <option value="er">erythrée</option>
+                        <option value="es">espagne</option>
+                        <option value="et">ethiopie</option>
+                        <option value="fi">finlande</option>
+                        <option value="fj">fidji</option>
+                        <option value="fk">iles falklands</option>
+                        <option value="fm">micronésie</option>
+                        <option value="fo">ile feroe</option>
+                        <option value="fr">france</option>
+                        <option value="ga">gabon</option>
+                        <option value="gd">grenade</option>
+                        <option value="ge">géorgie</option>
+                        <option value="gf">guyane française</option>
+                        <option value="gh">ghana</option>
+                        <option value="gi">gibraltar</option>
+                        <option value="gl">groënland</option>
+                        <option value="gq">guinée équatoriale</option>
+                        <option value="gm">gambie</option>
+                        <option value="gn">guinée</option>
+                        <option value="gp">guadeloupe</option>
+                        <option value="gr">grèce</option>
+                        <option value="gt">guatemala</option>
+                        <option value="gu">guam</option>
+                        <option value="gw">guinée-bissao</option>
+                        <option value="gy">guyane</option>
+                        <option value="hk">hong kong</option>
+                        <option value="hn">honduras</option>
+                        <option value="hr">croatie</option>
+                        <option value="ht">haïti</option>
+                        <option value="hu">hongrie</option>
+                        <option value="id">indonésie</option>
+                        <option value="ie">irlande</option>
+                        <option value="il">israël</option>
+                        <option value="in">inde</option>
+                        <option value="iq">iraq</option>
+                        <option value="ir">iran</option>
+                        <option value="is">islande</option>
+                        <option value="it">italie</option>
+                        <option value="jm">jamaïque</option>
+                        <option value="jo">jordanie</option>
+                        <option value="jp">japon</option>
+                        <option value="ke">kenya</option>
+                        <option value="kg">kirghistan</option>
+                        <option value="bf">burkina faso</option>
+                        <option value="ki">kiribati</option>
+                        <option value="km">république comorienne</option>
+                        <option value="kn">saint-christophe-et-niévès</option>
+                        <option value="kp">corée du nord</option>
+                        <option value="kr">corée du sud</option>
+                        <option value="kw">koweït</option>
+                        <option value="ky">iles caïmans</option>
+                        <option value="kz">kazakhstan</option>
+                        <option value="la">laos</option>
+                        <option value="lb">liban</option>
+                        <option value="lc">sainte-lucie</option>
+                        <option value="li">liechtenstein</option>
+                        <option value="lk">sri lanka</option>
+                        <option value="lr">libéria</option>
+                        <option value="ls">lesotho</option>
+                        <option value="lt">lituanie</option>
+                        <option value="lu">luxembourg</option>
+                        <option value="lv">lettonie</option>
+                        <option value="ly">libye</option>
+                        <option value="ma">maroc</option>
+                        <option value="mc">monaco</option>
+                        <option value="md">moldavie</option>
+                        <option value="mg">madagascar</option>
+                        <option value="ml">mali</option>
+                        <option value="mh">marshall</option>
+                        <option value="mk">macédoine</option>
+                        <option value="mm">myanmar</option>
+                        <option value="mq">martinique</option>
+                        <option value="mn">mongolie</option>
+                        <option value="mo">makau</option>
+                        <option value="mp">ile mariana du nord</option>
+                        <option value="mr">mauritanie</option>
+                        <option value="ms">monteserrat</option>
+                        <option value="mu">maurice</option>
+                        <option value="mt">malte</option>
+                        <option value="mv">maldives</option>
+                        <option value="mw">malawi</option>
+                        <option value="mx">mexique west</option>
+                        <option value="my">malaisie</option>
+                        <option value="mz">mozambique</option>
+                        <option value="na">namibie</option>
+                        <option value="nc">nouvelle-calédonie</option>
+                        <option value="ne">niger</option>
+                        <option value="nf">ile de norfolk</option>
+                        <option value="ng">nigeria</option>
+                        <option value="ni">nicaragua</option>
+                        <option value="nl">pays-bas</option>
+                        <option value="no">norvège</option>
+                        <option value="np">népal</option>
+                        <option value="nr">nauru</option>
+                        <option value="nu">niue</option>
+                        <option value="nz">nouvelle-zélande</option>
+                        <option value="om">oman</option>
+                        <option value="pa">panama</option>
+                        <option value="pe">pérou</option>
+                        <option value="pf">polynésie française</option>
+                        <option value="pg">papouasie - nouvelle guinée</option>
+                        <option value="ph">philippines</option>
+                        <option value="pk">pakistan</option>
+                        <option value="pl">pologne</option>
+                        <option value="pm">st. pierre and miquelon</option>
+                        <option value="pn">pitcairn</option>
+                        <option value="pr">porto rico</option>
+                        <option value="ps">palestine</option>
+                        <option value="pt">portugal</option>
+                        <option value="pw">palau</option>
+                        <option value="py">paraguay</option>
+                        <option value="qa">qatar</option>
+                        <option value="re">réunion</option>
+                        <option value="ro">roumanie</option>
+                        <option value="ru">fédération russe</option>
+                        <option value="rw">rwanda</option>
+                        <option value="sa">arabie saoudite</option>
+                        <option value="sb">iles salomon</option>
+                        <option value="sc">seychelles</option>
+                        <option value="sd">soudan</option>
+                        <option value="se">suède</option>
+                        <option value="sg">singapour</option>
+                        <option value="sh">saint hélène</option>
+                        <option value="si">slovénie</option>
+                        <option value="sk">slovaquie</option>
+                        <option value="sl">sierra leone</option>
+                        <option value="sm">saint-marin</option>
+                        <option value="sn">sénégal</option>
+                        <option value="so">somalie</option>
+                        <option value="sr">suriname</option>
+                        <option value="st">sao tomé-et-principe</option>
+                        <option value="sv">salvador</option>
+                        <option value="sy">syrie</option>
+                        <option value="sz">swaziland</option>
+                        <option value="tc">turks et caicos</option>
+                        <option value="td">république du tchad</option>
+                        <option value="tg">togo</option>
+                        <option value="th">thaïlande</option>
+                        <option value="tj">tchétchénie</option>
+                        <option value="tk">iles tokelau</option>
+                        <option value="tm">turkménistan</option>
+                        <option value="tunisie" selected="selected">tunisie</option>
+                        <option value="to">tonga</option>
+                        <option value="tp">timor-oriental</option>
+                        <option value="tr">turquie</option>
+                        <option value="tt">trinité-et-tobago</option>
+                        <option value="tv">tuvalu</option>
+                        <option value="tw">taiwan</option>
+                        <option value="tz">tanzanie</option>
+                        <option value="ua">ukraine</option>
+                        <option value="ug">ouganda</option>
+                        <option value="gb">royaume-uni</option>
+                        <option value="us">etats unis d'amérique</option>
+                        <option value="uy">uruguay</option>
+                        <option value="uz">ousbékistan</option>
+                        <option value="va">vatican</option>
+                        <option value="vc">saint-vincent-et-les grenadines</option>
+                        <option value="ve">vénézuela</option>
+                        <option value="vg">iles vierges américaines</option>
+                        <option value="vi">iles vierges britanniques </option>
+                        <option value="vn">viêt-nam</option>
+                        <option value="vu">vanuatu</option>
+                        <option value="wf">wallis et futuna</option>
+                        <option value="ws">samoa occidentales</option>
+                        <option value="ye">yémen</option>
+                        <option value="yt">mayotte</option>
+                        <option value="yu">yougoslavie</option>
+                        <option value="za">afrique du sud</option>
+                        <option value="zm">zambie</option>
+                        <option value="zw">zimbabwe</option>
+                      </select>
+                    </div>
+
+
+
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+
+                  <div style="margin-top: 20px;">
+                    <label> Ville </label>
+                    <input ngModel name="ville" type="text" #ville="ngModel" class="form-control input-field">
+                  </div>
+                  <div class="form" style="margin-top:20px;">
+                    <div style="margin-top: 10px;">
+                      <label> Type client </label>
+                      <select ngModel name="type_client" #type_client="ngModel" class="form-control input-field">
+                        <option value="service">Service</option>
+                        <option value="bien">Bien</option>
+                      </select>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                      <label>Nom entreprise <span style="color: rgb(213, 13, 13);">*</span></label>
+                      <input ngModel name="nom_entreprise" #nom_entreprise="ngModel" type="text"
+                        class="form-control  input-field" required>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                      <label>E-mail de paiement <span style="color: rgb(213, 13, 13);">*</span></label>
+                      <input ngModel name="email_payment" #email_payment="ngModel"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" class="form-control  input-field"
+                        required>
+                    </div>
+                    <div *ngIf="email_payment.invalid && email_payment.touched" class="text-danger">
+                      Mail de payment doit être une adresse email valide.
+                    </div>
+                    <div style="margin-top: 10px;">
+                      <label> Code postal </label>
+                      <input ngModel name="code_postal" #code_postal="ngModel" type="text"
+                        class="form-control input-field">
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                      <label> Adresse </label>
+                      <textarea ngModel name="adresse" #adresse="ngModel" class="form-control input-field"
+                        style="width: 520px; height: 66px;"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+
+
+          <div class="container" style="margin-top:5px;">
+
+            <h2 style="color: #7c7c7c;"> Informations site</h2>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form" style="margin-top:20px;">
+
+                  <div style="margin-top: 5px;">
+                    <label> Nom boutique <span style="color: rgb(213, 13, 13);">*</span></label>
+                    <input ngModel name="nom_boutique" #nom_boutique="ngModel" type="text"
+                      class="form-control input-field" required="required">
+                    <div *ngIf="email_payment.invalid && email_payment.touched" class="text-danger">
+                      Nom boutique est obligatoire.
+                    </div>
+                  </div>
+
+
+                  <div style="margin-top: 10px;">
+                    <label> Url <span style="color: rgb(213, 13, 13);">*</span></label>
+                    <input ngModel name="site_web" #site_web="ngModel" type="text" class="form-control  input-field"
+                      required="required" value="http://www.">
+                  </div>
+
+                  <div style="margin-top: 10px;">
+                    <label> Nom technicien</label>
+                    <input ngModel name="nom_technicien" #nom_technicien="ngModel" type="text"
+                      class="form-control input-field">
+                  </div>
+
+                  <div style="margin-top: 10px;">
+                    <label>Description site <span style="color: rgb(213, 13, 13);">*</span></label>
+                    <textarea ngModel name="description_site" #description_site="ngModel"
+                      class="form-control input-field" style="width: 520px; height: 66px;"></textarea>
+                  </div>
+
+                  <div id="conteneurCategorie" style="margin-top: 10px;">
+                    <label> Catégorie<span style="color: rgb(213, 13, 13);">*</span> </label>
+                    <select name="categorie_site" ngModel #categorie_site="ngModel" class="form-control input-field"
+                      required="required">
+                      <option value="0">Choisir une catégorie</option>
+                      <option value="11">Recharge téléphonique</option>
+                      <option value="13">Hébérgement</option>
+                      <option value="14">Imprimerie en ligne</option>
+                      <option value="15">Abonnement Internet</option>
+                      <option value="22">Agence de voyage</option>
+                      <option value="29">Restauration</option>
+                      <option value="30">Traiteurs </option>
+                      <option value="41">Sites de rencontre</option>
+                      <option value="47">Vidéos à la demande</option>
+                      <option value="48">Livres &amp; BD</option>
+                      <option value="49">Magazine en ligne</option>
+                      <option value="51">Ordinateurs </option>
+                      <option value="52">Périphériques </option>
+                      <option value="53">Logiciels</option>
+                      <option value="55">Fixe</option>
+                      <option value="56">Mobile</option>
+                      <option value="57">Smartphones &amp; Tablettes</option>
+                      <option value="62">Images &amp; Son</option>
+                      <option value="63">Mode</option>
+                      <option value="64">Costumes et déguisements</option>
+                      <option value="65">Sérigraphie</option>
+                      <option value="67">Beauté, soins et cosmétiques</option>
+                      <option value="73">Sports et Matériels</option>
+                      <option value="77">Santé</option>
+                      <option value="83">Bonne affaires</option>
+                      <option value="87">Achats groupés</option>
+                      <option value="88">Autres loisirs</option>
+                      <option value="112">Meuble &amp; Décoration</option>
+                      <option value="113">Jardinage &amp; Bricolage</option>
+                      <option value="114">Electroménagers</option>
+                      <option value="120">Artisanat</option>
+                      <option value="121">Service divers</option>
+                    </select>
+                  </div>
+                  <div style="margin-top: 20px;">
+                    <label>Logo(120px/79px)<span style="color: rgb(213, 13, 13);">*</span></label>
+                    <input ngModel type="file" name="logo_site" #logo_site="ngModel">
+                  </div>
+                </div>
+
+                <h2 style="color: #7c7c7c; margin-top: 25px;"> Informations site</h2>
+                <div class="form" style="margin-top: 20px;">
+
+
+                  <label><input ngModel type="checkbox" name="information_site" #information_site="ngModel"
+                      class="input-checkbox" autocomplete="off" value="CB_NATIONAL">CB NATIONAL</label>
+                  <label><input ngModel type="checkbox" name="information_site" #information_site="ngModel"
+                      class="input-checkbox" autocomplete="off" value="LA_POSTE">LA POSTE</label>
+                  <label> <input ngModel type="checkbox" name="information_site" #information_site="ngModel"
+                      class="input-checkbox" autocomplete="off" value="CB_INTERNATIONAL">CB INTERNATIONAL</label>
+                  <label><input ngModel type="checkbox" name="information_site" #information_site="ngModel"
+                      class="input-checkbox" autocomplete="off" value="GP_EWALLET">GP EWALLET</label>
+
+                </div>
+                <div class="row">
+
+                  <label><input type="hidden" name="cvg" value="0"><input type="checkbox" name="cvg" required="required"
+                      class="input-checkbox" value="1">
+
+                    J'ai lu et approuvé <a href="/">
+                      les conditions générales de vente </a><span style="color:#F00">*</span> </label>
+                </div>
+
+              </div>
+
+              <div class="col-md-6">
+                <div class="form" style="margin-top:20px;">
+                  <div style="margin-top: 10px;">
+                    <label>E-mail <span style="color: rgb(213, 13, 13);">*</span></label>
+                    <input ngModel name="email_site" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      #email_site="ngModel" type="email" class="form-control  input-field" required>
+                  </div>
+                  <div *ngIf="email_site.invalid && email_site.touched" class="text-danger">
+                    Mail de site doit être une adresse email valide.
+                  </div>
+                  <div style="margin-top: 10px;">
+                    <label> Téléphone <span style="color: rgb(213, 13, 13);">*</span></label>
+                    <input ngModel name="telephone_site" #telephone_site="ngModel" type="text"
+                      class="form-control input-field" required="required">
+                  </div>
+
+                  <div style="margin-top: 10px;">
+                    <label>Prénom technicien <span style="color: rgb(213, 13, 13);">*</span></label>
+                    <input ngModel name="prenom_technicien" #prenom_technicien="ngModel" type="text"
+                      class="form-control  input-field" required>
+                  </div>
+                  <div style="margin-top: 10px;">
+                    <label>Adresse complète</label>
+                    <textarea ngModel name="adresse_complete" #adresse_complete="ngModel"
+                      class="form-control input-field" style="width: 520px; height: 66px;"></textarea>
+                  </div>
+
+                  <div style="margin-top: 10px;">
+                    <label>Secteur d'activité<span style="color: rgb(213, 13, 13);">*</span></label>
+                    <select ngModel name="activite_secteur" #activite_secteur="ngModel" id="secteur"
+                      class="form-control input-field" required="required">
+                      <option value="Commerce">Commerce</option>
+                      <option value="Batiment">Batîment</option>
+                      <option value="Informatique">Informatique</option>
+                      <option value="Tourisme">Tourisme</option>
+                      <option value="Textile">Textile</option>
+                      <option value="Accessoire-Mode">Accessoire Mode</option>
+                      <option value="Autre">Autre</option>
+                    </select>
+                  </div>
+
+
+                  <div style="margin-top: 10px;">
+                    <label> Chiffre d'affaire(/mois) </label>
+                    <input ngModel name="chiffre_affaire" #chiffre_affaire="ngModel" type="number"
+                      class="form-control  input-field">
+                  </div>
+                </div>
+
+                <input type="submit" name="authentification" id="submit"
+                  class="btn btn-warning" value="valider">
+                  <div *ngIf="_errorMessage" class="alert alert-danger ml-3 text-white">{{_errorMessage}}</div>
+                  <div *ngIf="_successMessage" class="alert alert-success ml-3 text-white">your account has been registered!</div>
+    
+              </div>
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+
+
+
+
+
+
+
+
+  <div class="section section-team text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="team-player">
+            <img src="https://www.gpgcheckout.com/images/s-hba-5.png" alt="Thumbnail Image"
+              class="rounded-circle img-fluid img-raised">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="section" data-background-color="black">
+    <div class="row justify-content-md-center sharing-area text-center">
+      <div class="text-center col-md-4">
+        <h3 style="color: #ed6a18;">SUIVEZ-NOUS!</h3>
+      </div>
+      <div class="text-center col-md-4">
+        <a target="_blank" href="https://twitter.com/GlobalPaymentGa"
+          class="btn btn-neutral btn-icon btn-twitter btn-round btn-lg" rel="tooltip"
+          alt="twitter-gpg-global-payement-gateway">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://www.facebook.com/GlobalPaymentGateway?ref=bookmarks"
+          class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip"
+          title="facebook-gpg-global-payement-gateway-e-commerce-tunisie-checkout">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a target="_blank"
+          href="https://www.linkedin.com/company/5294983?trk=tyah&amp;trkInfo=tarId%3A1422286145350%2Ctas%3AGPG%2Cidx%3A3-1-9"
+          class="btn btn-neutral btn-icon btn-linkedin btn-lg btn-round" rel="tooltip"
+          title="linked-in-gpg-global-payement-gateway">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://plus.google.com/105307270472703676294/posts"
+          class="btn btn-neutral btn-icon btn-google btn-round btn-lg" rel="tooltip"
+          title="google-plus-gplus-gpg-global-payement-gateway">
+          <i class="fab fa-google"></i>
+        </a>
+
+        <a target="_blank" href="https://www.pinterest.com/gpgcheckout/"
+          class="btn btn-neutral btn-icon btn-pinterest btn-round btn-lg" rel="tooltip"
+          title="pinterest-gpg-global-payement-gateway">
+          <i class="fab fa-pinterest"></i>
+        </a>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer class="footer" style=" background-color: #ed6a18;">
+    <div class="row container text-center">
+      <div class="col-md-6">
+        <p style="color: white;font-size: 14px;">Copyright © 2023 - Powered by Global Payment Gateway
+          <span style="color: white;font-size: 10px;">Tous droits réservés</span>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://www.gpgcheckout.com/images/Carte%20paiement.png" alt="" title="">
+      </div>
+    </div>
+  </footer>
