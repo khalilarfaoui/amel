@@ -11,6 +11,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalBasic } from './modal/modal.component';
 import { DetailsComponent } from './details/details.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AcceuilDetailsComponent } from './acceuil-details/acceuil-details.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
         NotificationComponent,
         NgbdModalBasic,
         DetailsComponent,
-        AcceuilComponent
+        AcceuilComponent,
+        AcceuilDetailsComponent
 
     ],
     exports:[ ComponentsComponent ]

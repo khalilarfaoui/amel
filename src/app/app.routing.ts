@@ -13,10 +13,12 @@ import { PSPComponent } from './examples/psp/psp.component';
 import { DescriptionComponent } from './examples/description/description.component';
 import { DetailsComponent } from './components/details/details.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
+import { AcceuilDetailsComponent } from './components/acceuil-details/acceuil-details.component';
 const routes: Routes =[
     
     { path: '', redirectTo: 'index', pathMatch: 'full' },
     { path: 'accueil',component : AcceuilComponent },
+    { path: 'accueil/detail/:id',component : AcceuilDetailsComponent },
     { path: 'index',                component: ComponentsComponent },
     { path: 'index/sc/:id',                component: DetailsComponent },
     { path: 'examples/landing',     component: LandingComponent },

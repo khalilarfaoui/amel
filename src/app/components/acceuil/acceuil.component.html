@@ -62,21 +62,36 @@
         </div>
     </div>
 </div>
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 py-5" style="margin: 20px; justify-content: center;">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 row-cols-lg-5 g-6 py-5" style="margin: 20px; justify-content: center;">
 
     <div class="card" style="width: 18rem; justify-content: center;margin: 20px;" *ngFor="let i of info" >
         <div style="display: block;justify-content: center;">
 
-            <img class="card-img-top" style="width: 200px; min-height: 150px ; max-height: 150px ; border-radius: 20px;" [src]="i.Image" alt="Card image cap">
+            <img class="card-img-top" style="width: 100px; min-height: 100px ; max-height: 100px ; border-radius: 20px; padding: 30px;" [src]="i.Image" alt="Card image cap">
         </div>
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+            <h5 class="card-title">{{i.title}}</h5>
+            <p class="card-text" style="overflow: hidden; max-lines: 2; max-height: 100px ;min-height: 100px ; overflow: hidden;">{{i.desc}}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
+
 </div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 row-cols-lg-5 g-6 py-5" style=" justify-content: center;">
+
+    <div class="card" style="width: 18rem; justify-content: center;margin: 20px;" *ngFor="let i of infoSous" >
+     
+        <div class="card-body">
+            <h5 class="card-title">{{i.title}}</h5>
+            <p class="card-text" style="overflow: hidden; max-lines: 2; max-height: 100px ;min-height: 100px ; overflow: hidden;">{{i.desc}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+</div>
+
+
+
 
 
 <div class="section section-javascript" id="javascriptComponents">

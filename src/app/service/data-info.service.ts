@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
     providedIn: 'root'
 })
+//datatag
 export class DataInfoService {
 
     constructor() { }
@@ -98,26 +99,45 @@ export class DataInfoService {
     ]
 
     getDataAcceuil = [
+      
         {
+            id : 1 ,
             Image : "https://www.gpgcheckout.com/images/icon1.png",
             title : "SILUTION E-COMMERCE",
             desc : "GpgCheckout est une solution de paiement électrique destinée à tout marchand"
         },
         {
+            id : 2,
             Image : "https://www.gpgcheckout.com/images/icon2.png",
             title : "SÉCURTÉ ET GARANTIT",
             desc : "GPG garantit un environnement de paiement conforme aux réglementations VISA et MasterCard"
         },
         {
+            id : 3 ,
             Image : "https://www.gpgcheckout.com/images/icon4.png",
             title : "Kit de paiemen",
             desc : "GpgCheckout est une solution de paiement électronique gratuite et très simple à manipuler"
         },
         {
+            id : 4,
             Image : "https://www.gpgcheckout.com/images/icon5.png",
             title : "CYBERACHETEURS",
             desc : "GPG permet anx consommateurs d'avoir un espace spécifique pour pouvoir suivre tout les transaction"
         }
     ]
+
+    getDataAcceuilSous = [
+        {
+            title : 'A PROPOS DE NOUS',
+            desc : 'Global Payement Gateway est le premier prestataire de services paiements certifié PCI DSS de Visa et MasterCard en Afrique et au Moyen orient.' 
+        },
+        {
+            title : 'NEWS',
+            desc : "Venez découvrir nos nouveaux partenaires et bénéficiez d'une panoplie de produit et de service" 
+        }
+    ] 
+
+
+    
 
 }

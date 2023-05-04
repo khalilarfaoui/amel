@@ -6,11 +6,12 @@ import * as Rellax from 'rellax';
 import { DataInfoService } from 'app/service/data-info.service';
 
 @Component({
-  selector: 'app-acceuil',
-  templateUrl: './acceuil.component.html',
-  styleUrls: ['./acceuil.component.scss']
+  selector: 'app-acceuil-details',
+  templateUrl: './acceuil-details.component.html',
+  styleUrls: ['./acceuil-details.component.scss']
 })
-export class AcceuilComponent implements OnInit , OnDestroy{
+export class AcceuilDetailsComponent implements OnInit , OnDestroy {
+
   info :any
 
 
@@ -60,6 +61,5 @@ export class AcceuilComponent implements OnInit , OnDestroy{
     var body = document.getElementsByTagName('body')[0];
     body.classList.remove('index-page');
 }
-
 
 }
